@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://ultraq.net.nz/thymeleaf/Layout" lang="en">
+
+
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Searching a product by name</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" type="text/css" href="../static/css/MyStyle.css" th:href="@{/css/MyStyle.css}"/>
+
+</head>
+
+      <body>
+      <div layout:fragment="content">
+          <div class="panel-body">
+              <form th:action="@{search}" method="get">
+                  <label>Mot clé:</label>
+                  <input type="text" name="motCle" th:value="${motCle}"/>
+                  <button type="submit" class="btn btn-primary">chercher</button>
+              </form>
+          </div>
+          <div>
+              <table class="table table-striped">
+                  <thead>
+                  <tr><th>CODE</th><th>NOM</th><th>ADDRESS</th></tr>
+                  </thead>
+                  <tbody>
+                  <tr th:each="p:${pageclients.content}">
+                      <td th:text=${p.codeClient}></td>
+                      <td th:text=${p.nomClient}></td>
+                      <td th:text=${p.adresseClient}></td>
+
+                      <td>
+                          <a class="btn btn-danger" onclick="return confirm('voulez voussupprimez?')"
+                             th:href="@{/delete(id=${p.codeClient},page=${pagecourante},motCle=${motCle})}">Delete</a>
+                      </td>
+                  </tr>
+                  </tbody>
+              </table>
+          </div>
+          <div class="container">
+              <ul class="nav nav-pills">
+                  <li th:each="p:${pages}" th:class="${p==pagecourante}?active:''">
+                      <a th:text="${p}"
+                         th:href="@{search(page=${p},motCle=${motCle})}"></a>
+                  </li>
+              </ul>
+          </div>
+          <br/>
+      </div>
+      </body>
+</html>

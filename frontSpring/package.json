@@ -1,0 +1,53 @@
+{
+  "name": "frontlaravel",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "start": "webpack-dev-server --mode development"
+  },
+  "dependencies": {
+    "@splidejs/splide": "^4.1.4",
+    "axios": "^1.6.8",
+    "bootstrap": "^4.6.2",
+    "bootstrap-icons": "^1.11.3",
+    "bootstrap-vue": "^2.23.1",
+    "chart.js": "^4.4.2",
+    "core-js": "^3.8.3",
+    "html2pdf.js": "^0.10.1",
+    "jquery": "^3.7.1",
+    "jspdf": "^2.5.1",
+    "jspdf-autotable": "^3.8.2",
+    "moment": "^2.30.1",
+    "qrcode-reader-vue3": "^3.1.2",
+    "qrcode-svg": "^1.1.0",
+    "qrcode-vue3": "^1.6.8",
+    "sass": "^1.72.0",
+    "sass-loader": "^14.1.1",
+    "sweetalert2": "^11.10.8",
+    "vee-validate": "^4.5.8",
+    "vue": "^3.2.13",
+    "vue-pagination-2": "^3.1.0",
+    "vue-qrcode-reader": "^5.5.4",
+    "vue-router": "^4.0.3",
+    "vuelidate": "^0.7.7",
+    "vuex": "^4.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.16",
+    "@babel/eslint-parser": "^7.12.16",
+    "@types/bootstrap": "^5.2.10",
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-plugin-eslint": "~5.0.0",
+    "@vue/cli-plugin-router": "~5.0.0",
+    "@vue/cli-plugin-vuex": "~5.0.0",
+    "@vue/cli-service": "~5.0.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-vue": "^8.0.3",
+    "prettier": "^2.4.1"
+  }
+}
